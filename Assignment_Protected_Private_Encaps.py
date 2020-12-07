@@ -1,8 +1,9 @@
 class Car:
-    def __init__(self, speed, color, make):
+    def __init__(self, speed, color, make, cost):
         self.__speed = speed
         self.__color = color
         self.__make = make
+        self._cost = cost
 
     def _set_speed(self, value):
         self.__speed = value
@@ -22,11 +23,17 @@ class Car:
     def _get_make(self):
         return self.__make
 
+    def _set_cost(self, value):
+        self._cost = value
+
+    def _get_cost(self):
+        return self._cost
+
      
 
-Mazda = Car(137, "red", "Mazda")
-Ferrari = Car(211, "blue", "Ferrari")
-Lambo = Car(202, "black", "Lamborghini")
+Mazda = Car(137, "red", "Mazda", "$30,000")
+Ferrari = Car(211, "blue", "Ferrari", "$400,000" )
+Lambo = Car(202, "black", "Lamborghini", "$500,000")
 
 Mazda._set_speed(188)
 Ferrari._set_speed(225)
@@ -38,21 +45,28 @@ Lambo._set_color("Jet Black and Lime Green")
 
 Mazda_Spd_Msg = "The speed of the {} is: {:>5}".format(Mazda._get_make(), Mazda._get_speed())
 Mazda_Clr_Msg = "The color of the {} is: {:>8}".format(Mazda._get_make(), Mazda._get_color())
+Mazda_Cost_Msg = "The cost of the {} is: {:>8}\n".format(Mazda._get_make(), Mazda._get_cost())
 
 Ferrari_Spd_Msg = "The speed of the {} is: {:>5}".format(Ferrari._get_make(), Ferrari._get_speed())
 Ferrari_Clr_Msg = "The color of the {} is: {:>6}".format(Ferrari._get_make(), Ferrari._get_color())
+Ferrari_Cost_Msg = "The cost of the {} is: {:>8}\n".format(Ferrari._get_make(), Ferrari._get_cost())
 
 Lambo_Spd_Msg = "The speed of the {} is: {:>5}".format(Lambo._get_make(), Lambo._get_speed())
 Lambo_Clr_Msg = "The color of the {} is: {:>10}".format(Lambo._get_make(), Lambo._get_color())
+Lambo_Cost_Msg = "The cost of the {} is: {:>8}".format(Lambo._get_make(), Lambo._get_cost())
+
 
 print(Mazda_Spd_Msg)
 print(Mazda_Clr_Msg)
+print(Mazda_Cost_Msg)
 
 print(Ferrari_Spd_Msg)
 print(Ferrari_Clr_Msg)
+print(Ferrari_Cost_Msg)
 
 print(Lambo_Spd_Msg)
 print(Lambo_Clr_Msg)
+print(Lambo_Cost_Msg)
 
 
 
