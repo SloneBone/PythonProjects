@@ -1,14 +1,18 @@
+"""
+In an object oriented python program, you can restrict access to methods and variables.
+This can prevent the data from being modified by accident and is known as encapsulation.
+"""
 #The underscore syntax used in this file ( leading '_' and '__' with no trailing underscores)
-#invoke Python  technique called 'name mangling' to protect from clashes when inherited
+#invoke Python  technique called 'name mangling'
 """
 NOTE 1:
 Class-private names. Names in this category, when used within the context
-of a class definition, are re-written to use a mangledform to help avoid
+of a class definition, are re-written to use a mangled form to help avoid
 name clashes between “private” attributes/methods of base and derived classes.
 
 NOTE 2:
-Private name mangling: When an identifier that textually occurs in a class definitionbegins with two or more
-underscore charactersand does not end in two or more underscores,it is considered a private name of that class.
+Private name mangling: When an identifier that textually occurs in a class definition begins with two or more
+underscore characters and does not end in two or more underscores, it is considered a private name of that class.
 Private names are transformed to a longer form before code is generated for them. The transformation
 inserts the class name, with leading underscores removed and a single underscore inserted, in front of the name.
 For example, the identifier __spam occurring in a class named Ham will be transformed to _Ham__spam.
